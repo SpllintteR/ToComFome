@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/busca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/btnAddIngredientes"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/busca"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/lblNomeIngrediente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAddIngredientes"
+        android:layout_alignBottom="@+id/btnAddIngredientes"
+        android:layout_alignParentLeft="true"
+        android:text="Qtd:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edtIngrediente"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblNomeIngrediente"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/lblNomeIngrediente"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnPassosReceita"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAddIngredientes"
+        android:layout_alignBottom="@+id/btnAddIngredientes"
+        android:layout_toLeftOf="@+id/btnAddIngredientes"
+        android:text="Novo" />
+
+    <ListView
+        android:id="@+id/lstIngredientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnAddIngredientes" >
+
+    </ListView>
+
+</RelativeLayout>

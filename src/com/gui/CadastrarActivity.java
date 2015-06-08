@@ -1,30 +1,25 @@
 package com.gui;
 
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import ws.ServerRequest;
-import ws.ServerRequest.ServerRequestListener;
+import ws.requests.CadastrarRequest;
+import ws.requests.ServerListener;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import br.furb.receitas.bean.UsuarioBean;
 
-import com.example.tocomfome.R;
-
-public class CadastrarActivity extends Activity implements ServerRequestListener{
+public class CadastrarActivity extends Activity {
 
 	Button btnCadastrar;
 	EditText edtUsuario;
 	EditText edtSenha;
 	EditText edtEmail;
-	protected static final String URL = "";//TODO
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,51 +34,42 @@ public class CadastrarActivity extends Activity implements ServerRequestListener
 		btnCadastrar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				String user = edtUsuario.getText().toString();
-				String senha = edtSenha.getText().toString();
-				String email = edtEmail.getText().toString();
-				if (!user.isEmpty()
-						&& !senha.isEmpty()
-						&& !email.isEmpty()) {
-					ServerRequest ws = new ServerRequest(CadastrarActivity.this, URL, CadastrarActivity.this);
-					ws.execute(new BasicNameValuePair("user", user), new BasicNameValuePair("senha", senha), new BasicNameValuePair("email", email));
-				}
+				cadastrar();
 			}
 		});
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.cadastrar, menu);
-		return true;
-	}
+	private void cadastrar() {
+		String user = edtUsuario.getText().toString();
+		String senha = edtSenha.getText().toString();
+		String email = edtEmail.getText().toString();
+		if (!user.isEmpty() && !senha.isEmpty() && !email.isEmpty()) {
+			ServerListener listener = new ServerListener() {
+				@Override
+				public void sucess(JSONObject obj) {
+					Toast.makeText(CadastrarActivity.this,
+							"Usuário Cadastrado com sucesso!",
+							Toast.LENGTH_LONG).show();
+					UsuarioBean usuario = new UsuarioBean();
+					try {
+						usuario.setNome(obj.getString("nome"));
+						usuario.setEmail(obj.getString("email"));
+						usuario.setSenha(obj.getString("senha"));
+						usuario.setOID(Integer.parseInt(obj.getString("oid")));
+						//TODO: setar esse usuário pra algo global
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
+					CadastrarActivity.this.finish();
+				}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onRequestStart() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onRequestComplete(String response, boolean error) {
-		try {
-			JSONObject json = new JSONObject(response);
-			Toast.makeText(this, json.toString(), Toast.LENGTH_LONG).show();
-		} catch (JSONException e) {
-			e.printStackTrace();
+				@Override
+				public void error(String error) {
+					Toast.makeText(CadastrarActivity.this, "Erro ao cadastrar usuário: " + error,
+							Toast.LENGTH_LONG).show();
+				}
+			};
+			CadastrarRequest.cadastrar(this, listener, user, senha, email);
 		}
 	}
 }

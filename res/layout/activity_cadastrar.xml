@@ -9,43 +9,36 @@
     tools:context="com.gui.CadastrarActivity" >
 
     <EditText
-        android:id="@+id/edtUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:text="@string/Usuario" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/edtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtEmail"
-        android:layout_below="@+id/edtEmail"
-        android:ems="10"
-        android:text="@string/Email" />
-
-    <EditText
         android:id="@+id/edtSenha"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/edtUsuario"
+        android:layout_above="@+id/btnCadastrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="@string/Senha" />
 
-    <Button
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtSenha"
+        android:layout_alignRight="@+id/edtSenha"
+        android:ems="10"
+        android:text="@string/Email" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText android:id="@+id/edtUsuario" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_above="@+id/edtEmail" android:layout_alignRight="@+id/edtEmail" android:ems="10" android:inputType="textPersonName" android:text="Nome" /><Button
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtSenha"
-        android:layout_below="@+id/edtSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="@string/Cadastrar" />
+
+    
 
 </RelativeLayout>

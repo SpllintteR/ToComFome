@@ -6,13 +6,26 @@
     <string name="action_settings">Settings</string>
     <string name="Pesquisar">Pesquisar</string>
     <string name="Cadastrar">Cadastrar</string>
-    <string name="title_activity_cadastrar">CadastrarActivity</string>
+    <string name="title_activity_cadastrar">Cadastrar Usuario</string>
     <string name="Usuario">Usuario</string>
     <string name="Senha">Senha</string>
     <string name="Email">Email</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_login_intent">LoginIntent</string>
+    <string name="title_activity_login_intent">Login</string>
     <string name="Acessar">Acessar</string>
-    <string name="title_activity_info_usuario">InfoUsuarioActivity</string>
-
+    <string name="title_activity_info_usuario">Informação do Usuário</string>
+    <string name="Logar">Logar</string>
+    <string name="Quantidade">Quantidade</string>
+    <string name="Adicionar_busca">Adicionar</string>
+    <string name="Ingrediente">Ingrediente:</string>
+    <string name="nome_receita">Nome da receita</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="passo_a_passo">Passo a Passo</string>
+    <string name="ingrediente">Ingrediente</string>
+    <string name="nome_da_receita">Nome da Receita</string>
+    <string name="title_activity_buscar_receitas_intent">Busca de Receitas</string>
+    <string name="Adicionar">Adicionar</string>
+    <string name="Encerrar">Encerrar</string>
+    <string name="title_activity_cadastrar_receita">Cadastrar Receitas</string>
+    <string name="title_activity_cadastrar_ingrediente">Cadastrar Lista de Ingredientes</string>
 </resources>

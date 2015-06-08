@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.tocomfome;
+package com.gui;
 
 public final class R {
     public static final class attr {
@@ -25,21 +25,43 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
-        public static final int btnCadastrar=0x7f080003;
-        public static final int button1=0x7f080006;
-        public static final int edtEmail=0x7f080001;
-        public static final int edtSenha=0x7f080002;
-        public static final int edtSenhaLogin=0x7f080005;
-        public static final int edtUsuario=0x7f080000;
-        public static final int edtUsuarioLogin=0x7f080004;
-        public static final int textView1=0x7f080007;
+        public static final int Cadastrar=0x7f080018;
+        public static final int RelativeLayout1=0x7f080000;
+        public static final int action_settings=0x7f080017;
+        public static final int btnAddIngredientes=0x7f08000e;
+        public static final int btnBuscarReceitas=0x7f080004;
+        public static final int btnCadastrar=0x7f08000b;
+        public static final int btnEncerrar=0x7f08000f;
+        public static final int btnLogar=0x7f080015;
+        public static final int btnPassosReceita=0x7f080012;
+        public static final int busca=0x7f080001;
+        public static final int comboCadastro=0x7f080002;
+        public static final int drawer_layout=0x7f080016;
+        public static final int edtEmail=0x7f08000c;
+        public static final int edtIngrediente=0x7f080008;
+        public static final int edtPorcoesReceita=0x7f080007;
+        public static final int edtSenha=0x7f08000a;
+        public static final int edtSenhaLogin=0x7f080014;
+        public static final int edtTempoPreparoReceita=0x7f080011;
+        public static final int edtUsuario=0x7f08000d;
+        public static final int edtUsuarioLogin=0x7f080013;
+        public static final int imgReceita=0x7f080010;
+        public static final int lblNomeIngrediente=0x7f080006;
+        public static final int lstIngredientes=0x7f080009;
+        public static final int surfaceView1=0x7f080003;
+        public static final int textView2=0x7f080005;
     }
     public static final class layout {
-        public static final int activity_cadastrar=0x7f030000;
-        public static final int activity_info_usuario=0x7f030001;
-        public static final int activity_login_intent=0x7f030002;
-        public static final int activity_main=0x7f030003;
+        public static final int activity_busca=0x7f030000;
+        public static final int activity_busca_ingredientes=0x7f030001;
+        public static final int activity_cadastrar=0x7f030002;
+        public static final int activity_cadastrar_ingrediente=0x7f030003;
+        public static final int activity_cadastrar_passos=0x7f030004;
+        public static final int activity_cadastrar_receita=0x7f030005;
+        public static final int activity_info_usuario=0x7f030006;
+        public static final int activity_login_intent=0x7f030007;
+        public static final int activity_main=0x7f030008;
+        public static final int activity_vincula_ingrediente=0x7f030009;
     }
     public static final class menu {
         public static final int cadastrar=0x7f070000;
@@ -49,15 +71,29 @@ public final class R {
     }
     public static final class string {
         public static final int Acessar=0x7f05000b;
+        public static final int Adicionar=0x7f050017;
+        public static final int Adicionar_busca=0x7f05000f;
         public static final int Cadastrar=0x7f050004;
         public static final int Email=0x7f050008;
+        public static final int Encerrar=0x7f050018;
+        public static final int Ingrediente=0x7f050010;
+        public static final int Logar=0x7f05000d;
         public static final int Pesquisar=0x7f050003;
+        public static final int Quantidade=0x7f05000e;
         public static final int Senha=0x7f050007;
         public static final int Usuario=0x7f050006;
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050001;
+        public static final int ingrediente=0x7f050014;
+        public static final int ingredientes=0x7f050012;
+        public static final int nome_da_receita=0x7f050015;
+        public static final int nome_receita=0x7f050011;
+        public static final int passo_a_passo=0x7f050013;
+        public static final int title_activity_buscar_receitas_intent=0x7f050016;
         public static final int title_activity_cadastrar=0x7f050005;
+        public static final int title_activity_cadastrar_ingrediente=0x7f05001a;
+        public static final int title_activity_cadastrar_receita=0x7f050019;
         public static final int title_activity_info_usuario=0x7f05000c;
         public static final int title_activity_login_intent=0x7f05000a;
         public static final int title_activity_main=0x7f050009;
@@ -89,5 +125,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int styleName=0x7f060002;
     }
 }

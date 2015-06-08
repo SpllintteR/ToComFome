@@ -1,26 +1,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.helloworld.MainActivity" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnBuscarReceitas"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCadastrar"
+        android:layout_alignLeft="@+id/btnCadastrar"
+        android:layout_marginBottom="21dp"
+        android:text="Pesquisar" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Cadastrar-se" />
+
+    <Button
+        android:id="@+id/btnLogar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="25dp"
-        android:text="Button" />
+        android:layout_alignLeft="@+id/btnCadastrar"
+        android:layout_alignRight="@+id/btnCadastrar"
+        android:layout_below="@+id/btnCadastrar"
+        android:layout_marginTop="26dp"
+        android:text="@string/Logar" />
 
 </RelativeLayout>

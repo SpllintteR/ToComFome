@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgReceita"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/edtIngrediente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="@string/nome_receita" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAddIngredientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="@string/ingredientes" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lblNomeIngrediente"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="16dp"
+            android:text="Porções:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtPorcoesReceita"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/lblNomeIngrediente"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/lblNomeIngrediente"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblNomeIngrediente"
+            android:layout_marginTop="22dp"
+            android:text="Tempo de preparo:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtTempoPreparoReceita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:ems="10" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPassosReceita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/passo_a_passo" />
+
+</LinearLayout>

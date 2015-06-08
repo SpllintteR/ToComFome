@@ -10,20 +10,40 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.example.tocomfome.R;
-
 public class MainActivity extends Activity {
 
+	Button logar;
+	Button cadastrar;
+	Button buscar;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button b = (Button) findViewById(R.id.button1);
-		b.setOnClickListener(new OnClickListener() {
+		logar = (Button) findViewById(R.id.btnLogar);
+		logar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(MainActivity.this, LoginActivity.class);
+				startActivity(i);
+			}
+		});
+		
+		cadastrar = (Button) findViewById(R.id.btnCadastrar);
+		cadastrar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(MainActivity.this, CadastrarActivity.class);
+				startActivity(i);
+			}
+		});
+		
+		buscar = (Button) findViewById(R.id.btnBuscarReceitas);
+		buscar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(MainActivity.this, BuscarReceitasActivity.class);
 				startActivity(i);
 			}
 		});
